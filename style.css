@@ -26,7 +26,7 @@ form input {
   outline: none;
 }
 
-form #submit {
+form #submitBtn {
   width: 50px;
   height: 44px;
 }
