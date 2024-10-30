@@ -98,19 +98,6 @@ form.addEventListener("submit", function (e) {
   }
 
   if (Object.keys(errorObj).length === 0) {
-    // const formData = {
-    //   username: username.value,
-    //   lastName: lastName.value,
-    //   password: password.value,
-    //   email: email.value,
-    //   phone: phone.value,
-    //   zipcode: zipcode.value,
-    //   age: age.value,
-    //   gender: gender ? "Selected" : "Not selected",
-    // };
-
-    // console.log("Form Submitted with Values:", formData);
-
     form.submit();
   }
 });
