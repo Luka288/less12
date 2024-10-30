@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #152136;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+form input {
+  width: 240px;
+  height: 23px;
+  outline: none;
+}
+
+form #submit {
+  width: 50px;
+  height: 44px;
+}
+
+form .gender {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+form .gender input {
+  width: auto;
+}
+
+.errorP {
+  color: red;
+  font-size: 10px;
+}
+
+.cookies {
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  z-index: 11;
+  background-color: gray;
+  position: fixed;
+  color: white;
+}
+
+.cookies .buttons {
+  width: 100%;
+  gap: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}

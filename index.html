@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="" id="form">
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" autocomplete="off" />
+        <p class="errorP" id="error-username"></p>
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="lastName" autocomplete="off" />
+        <p class="errorP" id="error-lastName"></p>
+        <label for="password">password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="off"
+        />
+        <p class="errorP" id="error-password"></p>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" autocomplete="off" />
+        <p class="errorP" id="error-email"></p>
+        <label for="phone">phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="off" />
+        <p class="errorP" id="error-phone"></p>
+        <label for="age">age</label>
+        <input type="number" id="age" name="age" autocomplete="off" />
+        <p class="errorP" id="error-age"></p>
+        <label for="zipcode">zipcode</label>
+        <input type="text" id="zipcode" name="zipcode" autocomplete="off" />
+        <p class="errorP" id="error-zipcode"></p>
+        <div class="gender">
+          <div class="genderInputs">
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              autocomplete="off"
+            />
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" />
+          </div>
+          <p class="errorP" id="error-gender"></p>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+      <div class="cookies">
+        <div class="buttons">
+          <a id="agree">Agree</a>
+          <a id="disagree">Disagree</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
