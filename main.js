@@ -86,7 +86,7 @@ form.addEventListener("submit", function (e) {
   if (!gender) {
     errorObj.gender = "Select gender";
     if (genderErrorP) {
-      genderErrorP.textContent = errorObj.gender; // Set gender error message
+      genderErrorP.textContent = errorObj.gender;
     }
   }
 
@@ -132,11 +132,13 @@ function createToDo(text) {
 function loadFromStorage() {
   const checkItems = JSON.parse(localStorage.getItem("tasks"));
 
-  checkItems.forEach((tasks) => {
-    const li = document.createElement("li");
-    li.innerText = tasks;
-    ul.appendChild(li);
-  });
+  if (checkItems) {
+    checkItems.forEach((tasks) => {
+      const li = document.createElement("li");
+      li.innerText = tasks;
+      ul.appendChild(li);
+    });
+  }
 }
 
 function savetoStorage(todo) {
