@@ -74,7 +74,7 @@ form.addEventListener("submit", function (e) {
   }
 
   if (age.value < 18) {
-    errorObj.age = "You must be 18 or over 18";
+    errorObj.age = "You must be 18 years old or older.";
   }
 
   this.querySelectorAll('[name ="gender"]').forEach((item) => {
