@@ -24,7 +24,10 @@ const emailRegex =
 
 agree.addEventListener("click", function () {
   cookieContainer.style.display = "none";
-  document.cookie = `username = ${username.value}`;
+  if (username) {
+    Cookies.set("username", username.value, { expires: 7 });
+  }
+  // document.cookie = `username = ${username.value}`;
 });
 
 disagree.addEventListener("click", function () {
