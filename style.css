@@ -63,3 +63,7 @@ form .gender input {
   display: flex;
   justify-content: flex-end;
 }
+
+.todo {
+  color: white;
+}

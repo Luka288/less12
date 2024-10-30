@@ -101,3 +101,45 @@ form.addEventListener("submit", function (e) {
     this.submit();
   }
 });
+
+// load TODOS
+
+const btn = document.getElementById("btn-add");
+const ul = document.getElementById("todoul");
+
+loadFromStorage();
+
+btn.addEventListener("click", handleClick);
+
+function handleClick() {
+  // console.log(this); //button
+  const inputValue = this.previousElementSibling.value.trim();
+  console.log(inputValue);
+
+  if (inputValue) {
+    createToDo(inputValue);
+    savetoStorage(inputValue);
+    this.previousElementSibling.value = "";
+  }
+}
+
+function createToDo(text) {
+  const li = document.createElement("li");
+  li.innerText = text;
+  ul.appendChild(li);
+}
+
+function loadFromStorage() {
+  const checkItems = JSON.parse(localStorage.getItem("tasks"));
+
+  checkItems.forEach((tasks) => {
+    const li = document.createElement("li");
+    li.innerText = tasks;
+    ul.appendChild(li);
+  });
+}
+
+function savetoStorage(todo) {
+  const todoElements = JSON.parse(localStorage.getItem("tasks")) || [];
+  localStorage.setItem("tasks", JSON.stringify([...todoElements, todo]));
+}
